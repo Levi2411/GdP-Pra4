@@ -1,6 +1,6 @@
 public class Riddle {
     public static void main(String[] args) {
-        int N = 7;
+        int N = Integer.parseInt(args[0]);
         int[] reihe = new int[2 * N];
         
         if (N < 3 || N > 15) {
