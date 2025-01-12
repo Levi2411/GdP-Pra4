@@ -2,7 +2,17 @@ public class Roman {
     public static void main(String[] args) {
         int N = Integer.parseInt(args[0]);
         // Behandlung fehlender oder falscher Eingabeparameter
-        assert(1 <= N && N <= 5000);
+        
+        try {
+            if (N < 1 || N > 5000)
+                throw new IllegalArgumentException();
+
+
+        } catch (IllegalArgumentException ex) {
+            System.out.println("Invalid input. Please enter a valid number.");
+            System.exit(2);
+        }
+        
         System.out.println(roman(N));
     }
 
